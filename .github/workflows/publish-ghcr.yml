@@ -4,9 +4,9 @@ name: Publish to GitHub Package Registry
 on:
   push:
     branches:
-      - 'master'
+      - "master"
     tags:
-      - 'v*'
+      - "v*"
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
