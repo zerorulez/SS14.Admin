@@ -21,4 +21,5 @@ RUN dotnet publish "SS14.Admin.csproj" -c $BUILD_CONFIGURATION -o /app/publish /
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+VOLUME ["/app"]
 ENTRYPOINT ["dotnet", "SS14.Admin.dll"]
